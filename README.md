@@ -1,6 +1,6 @@
 # Just a simple tic-tac-toe game built in React.
 
-## TODO:
+## Stuff I might add
 * Implement a computer player
 * Allow user to choose if they are X or O
 * Make nicer styles
