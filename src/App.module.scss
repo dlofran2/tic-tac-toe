@@ -1,0 +1,75 @@
+button {
+    margin-bottom: 20px;
+}
+
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ticTacToeContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    height: 500px;
+    width: 500px;
+
+    @media all and (max-width: 500px) {
+        width: 100vw;
+        height: 100%;
+    }
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+
+    &:nth-child(2), &:nth-child(8) {
+        border: 1px solid black;
+        border-top: 0;
+        border-bottom: 0;
+    }
+    
+    &:nth-child(4), &:nth-child(6) {
+        border: 1px solid black;
+        border-left: 0;
+        border-right: 0;
+    }
+    
+    &:nth-child(5) {
+        border: 1px solid black;
+    }
+}
+
+.winOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerWinContainer {
+    padding: 50px 100px;
+    border: 3px solid black;
+    background-color: rgb(133, 196, 207);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media all and (max-width: 500px) {
+        padding: 25px 50px;
+    }
+}
